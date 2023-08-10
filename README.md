@@ -1,3 +1,3 @@
 # Learn redux ToolKit
 
-From a redux application to a migration to redux toolkit
+Redux example & introduction to immer lib
