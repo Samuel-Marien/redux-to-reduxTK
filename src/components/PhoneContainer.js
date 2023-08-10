@@ -15,6 +15,10 @@ const PhoneContainer = (props) => {
         Disponibilité
         <span id="count">{props.phones}</span>
       </p>
+      <p>
+        Couleur
+        <span id="count">{props.color}</span>
+      </p>
       <div className="btnContainer">
         <button onClick={() => props.buyPhone(totalPhone)}>Acheter</button>
         <input
@@ -29,7 +33,8 @@ const PhoneContainer = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    phones: state.phones.phones
+    phones: state.phones.phones,
+    color: state.phones.infos.color
   }
 }
 
@@ -40,23 +45,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PhoneContainer)
-
-// import { useSelector, useDispatch } from 'react-redux'
-
-// const PhoneContainer = () => {
-//   const phones = useSelector((state) => state.phones)
-//   const dispatch = useDispatch()
-
-//   return (
-//     <div className="container">
-//       <img src={phone} alt="phone" />
-//       <p>
-//         Disponibilité
-//         <span id="count">{phones}</span>
-//       </p>
-//       <button onClick={() => dispatch(buyPhone())}>Acheter</button>
-//     </div>
-//   )
-// }
-
-// export default PhoneContainer

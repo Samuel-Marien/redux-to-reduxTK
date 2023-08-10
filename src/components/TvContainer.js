@@ -11,7 +11,7 @@ const TvContainer = (props) => {
 
   return (
     <div className="container">
-      <img src={tv} atl="tv" />
+      <img src={tv} alt="example stuff" />
       <p>
         Disponibilité <span id="count">{props.tv}</span>
       </p>
